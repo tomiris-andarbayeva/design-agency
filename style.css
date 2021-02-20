@@ -117,26 +117,28 @@ h3, p {
 }
 
 
-/* Media queries tablet and desktop
+ /* Media queries for both tablet and desktop */
 
-.cards{
-    border: solid 1px yellow;
-    display: inline-flex;
-    justify-content: center;
-    justify-content: space-evenly;
-    padding: 10px 30px;
-    background-color: rgb(72, 69, 69);
-    color: white;
-   
-}
-
-.card-box {
-    width: 20%; 
-    border: oldlace solid 1px;
-    color: black;
-    background-color: white;
-}
-
-img {
-    width: 100%; 
-} */
+ @media screen and (min-width: 768px) {
+    .cards{
+        border: solid 1px yellow;
+        display: grid;
+        grid-template-columns:auto auto auto;
+        padding: 10px 30px;
+        background-color: rgb(72, 69, 69);
+        color: white;
+    }
+    
+    .card-box {
+        
+        border: oldlace solid 1px;
+        color: black;
+        background-color: white;
+        height: 100%;
+    }
+    
+    img {
+        width: 100%; 
+    } 
+    
+ }
