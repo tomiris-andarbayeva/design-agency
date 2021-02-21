@@ -1,36 +1,16 @@
-*{
-    margin: 0%;
-}
-
 body {
+    margin: 0%;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 17px;
 }
 
-/* h1, h2, h3 {border: chartreuse solid 1px;
-  } 
-  p{
-    border: orange solid 1px;
-}*/
-   
- h1,h2, h3, p {
-    width:90%;
-    padding: 2% 0%;
-    margin: auto;
+
+h1, h2, h3{
+    margin-top: 0;
 }
 
-h2, h3 {
-    margin-bottom: 20px;
-}
-
-
-.header-p, h1 {
-    max-width: 80%;
-    margin: auto;
-}
-
-/* Header styling */
+/* HEADER STYLING*/
 
 header {
     background-image:url(images/backgr-img.webp) ;
@@ -42,16 +22,22 @@ header {
 
 }
 
+.container h1 {
+    padding-top: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
-h1 {
-    padding-top: 100px;
+.first-paragraph {
+    max-width:80%;
+    margin: auto;
 }
 
 .button {
     border: solid 1px white;
     width: 100px;
     margin: auto;
-    padding: 20px;
+    padding: 15px;
     margin-top: 20px;
     background-color: rgb(40, 38, 38);
 }
@@ -60,36 +46,38 @@ h1 {
     background-color: darkorange;
 }
 
-/* Content section */
+/* CONTENT SECTION AS A ONE PARAGRAPH*/
+
 
 .content{
-    padding: 50px;
-    background-color: rgb(215, 206, 206);
+    background-color: white;
+    text-align: center;
+    padding: 40px;
 }
 
-/* Cards section */
+.light-grey {
+    background-color: lightgrey;
+}
 
-.cards{
+
+/* CARDS SECTION VERTICALLY */
+
+.cards-wrapper {
     background-color:rgb(72, 69, 69) ;
-    padding: 20px;
+    padding: 20px 0px;
 }
 
 .card-box {
-    margin: auto;
-    width: 90%;
     background-color: white;
+    margin: 20px;
 }
 
 img {
     width: 100%;
 }
 
-h3, p {
-    margin: 20px;
-}
 
-
-/* Footer styling */
+/* CONTACT AND ABOUT SECTION VERTICALLY*/
 
 .blue {
     background-color: rgb(40, 172, 225);
@@ -101,32 +89,38 @@ h3, p {
     background-color: rgb(72, 69, 69);
 }
 
+/* FOOTER */
 .black {
     
     background-color: black;
     color: white;
 }
 
-.blue, .gray, .black {
-    padding: 40px;
-}
 
 .traversy {
     color:  rgb(40, 172, 225);
     text-decoration:none;
 }
 
-
- /* Media queries for both tablet and desktop */
+ /* TABLET AND DESKTOP */
 
  @media screen and (min-width: 768px) {
-    .cards{
-        border: solid 1px yellow;
-        display: grid;
-        grid-template-columns:auto auto auto;
-        padding: 10px 30px;
-        background-color: rgb(72, 69, 69);
-        color: white;
+
+    /* DIVIDING ONE PARAGRAPH INTO 2 COLUMNS */
+     .second-paragraph {
+         columns: 2;
+         column-gap: 2%;
+         padding: 0px 40px;
+     }
+
+     /* MAKING 3 CARD-BOXES HORIZONTALLY */
+    .cards-wrapper{
+        
+      display:inline-flex;
+      justify-content: space-evenly;
+      justify-content: center;
+      width: 100%;
+     
     }
     
     .card-box {
@@ -134,11 +128,22 @@ h3, p {
         border: oldlace solid 1px;
         color: black;
         background-color: white;
-        height: 100%;
+        max-width: 200px;
+       
+    }
+
+    .card-text{
+        padding: 20px;
     }
     
     img {
         width: 100%; 
     } 
     
+
+    /* MAKING CONTACT AND ABOUT SECTION NEXT TO EACH OTHER */
+    .blue-gray {
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+    }
  }
